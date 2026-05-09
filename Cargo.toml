@@ -1,0 +1,36 @@
+[package]
+name = "agent-escrow-contract"
+version = "1.0.0"
+edition = "2021"
+description = "AI Agent Spending Limit Escrow - Production ready Soroban smart contract"
+license = "MIT"
+authors = ["AgentPayEscrow"]
+repository = "https://github.com/AgentPayEscrow/agent-escrow-contract"
+keywords = ["stellar", "soroban", "escrow", "ai-agent", "spending-limits"]
+categories = ["cryptocurrency", "smart-contracts"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = "25.1.0"
+
+[dev-dependencies]
+soroban-sdk = { version = "25.1.0", features = ["testutils"] }
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true
+
+[features]
+testutils = ["soroban-sdk/testutils"]
