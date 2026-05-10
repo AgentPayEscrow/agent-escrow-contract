@@ -2,7 +2,7 @@
 name = "agent-escrow-contract"
 version = "1.0.0"
 edition = "2021"
-description = "AI Agent Spending Limit Escrow - Production ready Soroban smart contract"
+description = "Production-grade AI Agent Spending Limit Escrow for Stellar Soroban"
 license = "MIT"
 authors = ["AgentPayEscrow"]
 repository = "https://github.com/AgentPayEscrow/agent-escrow-contract"
