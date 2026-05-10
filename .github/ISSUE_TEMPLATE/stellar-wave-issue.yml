@@ -1,0 +1,28 @@
+name: Stellar Wave Issue
+description: Create an issue for Drips Wave contributors
+title: "[FEATURE]: "
+labels: ["Stellar Wave"]
+body:
+  - type: markdown
+    attributes:
+      value: "## Stellar Wave Issue"
+  - type: input
+    id: complexity
+    attributes:
+      label: "Complexity"
+      placeholder: "Easy (100) / Medium (150) / Hard (200)"
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      placeholder: "What needs to be done?"
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      placeholder: "- [ ] Task 1\n- [ ] Task 2"
+  - type: textarea
+    id: files
+    attributes:
+      label: "Files to Change"
+      placeholder: "src/agent/mod.rs\nsrc/limits/mod.rs"

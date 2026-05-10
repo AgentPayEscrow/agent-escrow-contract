@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord
+    url: https://discord.gg/agentescrow
+    about: Join our Discord for help
+  - name: Telegram
+    url: https://t.me/agentescrow
+    about: Join our Telegram for discussions
+  - name: Security Issues
+    url: security@agentescrow.io
+    about: Report security vulnerabilities here
