@@ -1,22 +1,25 @@
-
-```markdown
 # Security Policy
 
 ## Reporting a Vulnerability
 
-**DO NOT file a public issue.** Email security@agentescrow.io
+**Email:** security@agentpay.io
 
-## Response Time
+Please include:
+- Description of the issue
+- Steps to reproduce
+- Potential impact
 
-| Severity | Response Time |
-|----------|---------------|
-| Critical | 4 hours |
-| High | 24 hours |
-| Medium | 72 hours |
-| Low | 7 days |
+## Smart Contract Security
+
+This contract handles user funds. Security is critical.
+
+- All functions use `require_auth()`
+- Spending limits enforced
+- Emergency pause available
+- Multi-signature for admin functions
 
 ## Supported Versions
 
 | Version | Supported |
 |---------|-----------|
-| 1.x.x | ✅ Yes |
+| 1.x.x | ✅ |
