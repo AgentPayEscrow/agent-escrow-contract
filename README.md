@@ -1,29 +1,36 @@
-# Agent Escrow Frontend
+# Agent Escrow Contract
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Netlify](https://img.shields.io/badge/Netlify-Deployed-brightgreen)](https://agentescrow.netlify.app)
+[![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange)](https://www.rust-lang.org/)
+[![Soroban](https://img.shields.io/badge/Soroban-25.1.0-purple)](https://soroban.stellar.org/)
 
 ## Overview
 
-Frontend dashboard for Agent Escrow. Create AI agents, set spending limits, and monitor payments.
+Soroban smart contract for AI agent spending limit escrow with human overseer.
 
 ## Features
 
 | Feature | Description |
 |---------|-------------|
-| **Wallet Connection** | Connect Freighter wallet |
-| **Agent Management** | Create, pause, resume agents |
-| **Spending Limits** | Set daily/weekly/monthly caps |
-| **Payment History** | View all transactions |
+| Agent Management | Create, pause, resume, terminate agents |
+| Spending Limits | Daily, weekly, monthly caps |
+| Human Oversight | Supervisors can pause and adjust limits |
+| Multi-token | XLM, USDC, any Stellar asset |
+| Dispute Resolution | Raise and resolve disputes |
 
-## Quick Start
+## Contract Functions
+
+| Function | Description |
+|----------|-------------|
+| `create_agent` | Create new AI agent |
+| `deposit` | Fund an agent |
+| `set_limits` | Set spending caps |
+| `pay` | Agent makes payment |
+| `pause_agent` | Pause agent |
+| `resume_agent` | Resume agent |
+| `raise_dispute` | Dispute a transaction |
+
+## Deployment
 
 ```bash
-# Clone the repository
-git clone https://github.com/AgentPayEscrow/agent-escrow-app.git
-
-# Open index.html in your browser
-open index.html
-
-# Or use live server
-npx live-server
+cargo build --target wasm32-unknown-unknown --release
